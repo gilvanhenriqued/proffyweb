@@ -67,7 +67,7 @@
   background: var(--color-box-base);
   border: 1px solid var(--color-line-white);
   border-radius: 0.8rem;
-  margin-top: 2,4rem;
+  margin-top: 2.2rem;
   overflow: hidden;
 }
 
@@ -157,6 +157,33 @@
     margin-top: 0;
   }
 
-  
+  #page-teacher-list main {
+    padding: 3.2rem 0;
+    max-width: 74rem;
+  }
+
+  .teacher-item header,
+  .teacher-item footer {
+    padding: 3.2rem;
+  }
+
+  .teacher-item > p {
+    padding: 0 3.2rem;
+  }
+
+  .teacher-item footer p strong {
+    display: initial;
+    margin-left: 1.6rem;
+  }
+
+  .teacher-item footer button {
+    width: 24.5rem;
+    font-size: 1.6rem;
+    justify-content: center;
+  }
+
+  .teacher-item footer button img {
+    margin-right: 1.6rem;
+  }
 
 }
