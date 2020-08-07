@@ -21,13 +21,13 @@
   resize: vertical;
   padding: 1.2rem 1.6rem;
   font: 1.6rem Archivo;
+  min-height: 8rem;
 }
 
 .textarea-block::after {
   transition: 0.3s;
   width: 0px;
   height: 2px;
-  min-height: 8rem;
   content: "";
   background: var(--color-primary-light);
   position: absolute;
