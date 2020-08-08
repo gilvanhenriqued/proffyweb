@@ -4,28 +4,39 @@ import whatsappIcon from '../../assets/images/icons/whatsapp.svg';
 
 import './styles.css';
 
-function TeacherItem() {
+export interface Teacher {
+  id: number;
+  name: string;
+  avatar: string;
+  bio: string;
+  whatsapp: string;
+  cost: number;
+  subject: string;
+}
+
+interface TeacherItemProps {
+  teacher: Teacher;
+}
+
+const TeacherItem: React.FC<TeacherItemProps> = ({ teacher }) => {
   return (
     <article className="teacher-item">
       <header>
-        <img src="https://avatars3.githubusercontent.com/u/28894474?s=400&u=2578374c7853fc795acc63e3c93080fd74adc60f&v=4" alt="Foto de Perfil"/>
+        <img src={teacher.avatar} alt="Foto de Perfil"/>
         <div>
-          <strong>Gilvan Henrique</strong>
-          <span>Física</span>
+          <strong>{teacher.name}</strong>
+          <span>{teacher.subject}</span>
         </div>
       </header>
 
       <p>
-        Olá! Eu me chamo Gilvan Henrique e sou professor de física.
-        <br/>
-        Prezo sempre por uma aula dinâmica, usando recursos modernos e tecnológicos
-        para tornar a sala de aula um lugar mais atrativo e interessante para os alunos.
+        {teacher.bio}
       </p>
 
       <footer>
         <p>
           Preço/hora
-          <strong>R$60,00</strong>
+          <strong>R$ {teacher.cost}</strong>
         </p>
         <button>
           <img src={whatsappIcon} alt="Whatsapp do professor" />
